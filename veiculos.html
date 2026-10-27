@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coleção — AlphaVision</title>
+  <link rel="stylesheet" href="css/maison.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Saira+Condensed:wght@400;500&display=swap">
+</head>
+<body>
+<header class="nav is-solid">
+  <div class="nav-side"><button class="nav-btn" id="open-menu" type="button">Menu</button><nav class="nav-links"><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a><a href="colaboracao.html">Colaboração</a></nav></div>
+  <a class="word" href="index.html">Alphavision</a>
+  <div class="nav-side end"><button class="nav-btn" id="open-cart" type="button" data-count>Reserva</button></div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu-top"><button class="nav-btn" id="close-menu" type="button">Fechar</button><span class="word">Alphavision</span><span></span></div>
+  <div class="menu-grid">
+    <div><h2>Navegar</h2><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a></div>
+    <div><h2>Negócios</h2><a href="financeiro.html">Financiamento</a><a href="colaboracao.html">Colaboração</a><a href="index.html#patrocinadores">Patrocinadores</a></div>
+    <div><h2>Contato</h2><a href="colaboracao.html#agente">Falar com um agente</a><a href="empresa.html#sob-medida">Sob medida</a></div>
+  </div>
+</div>
+<main id="colecao">
+  <section class="stage" id="stage" aria-label="Destaques"></section>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">A coleção</p>
+        <h2 class="display">Atemporal. Em estoque curto.</h2>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="models" id="grid"></div>
+    </div>
+  </section>
+  <div id="modal-root"></div>
+</main>
+<footer class="footer"><div class="wrap"><p class="center-word word">Alphavision</p><div class="legal"><span>© 2026 AlphaVision.</span><a href="index.html">Início</a></div></div></footer>
+<button class="veil" id="veil" type="button" hidden></button>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2 class="kicker" style="margin:0">Sua reserva</h2><button class="nav-btn" id="close-cart" type="button">Fechar</button></div>
+  <div class="drawer-list" id="cart-list"></div>
+  <div class="drawer-foot">
+    <div class="row muted"><span>Subtotal</span><span id="cart-sub"></span></div>
+    <div class="row muted"><span>Logística (3%)</span><span id="cart-tax"></span></div>
+    <div class="total"><span>Total</span><span id="cart-tot"></span></div>
+    <button class="pill" id="cart-go" type="button">Confirmar com a equipe</button>
+  </div>
+</aside>
+<script src="js/site.js"></script>
+</body>
+</html>

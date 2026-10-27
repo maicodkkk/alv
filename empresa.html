@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Empresa — AlphaVision</title>
+  <link rel="stylesheet" href="css/maison.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Saira+Condensed:wght@400;500&display=swap">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-side"><button class="nav-btn" id="open-menu" type="button">Menu</button><nav class="nav-links"><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a><a href="colaboracao.html">Colaboração</a></nav></div>
+  <a class="word" href="index.html">Alphavision</a>
+  <div class="nav-side end"><button class="nav-btn" id="open-cart" type="button" data-count>Reserva</button></div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu-top"><button class="nav-btn" id="close-menu" type="button">Fechar</button><span class="word">Alphavision</span><span></span></div>
+  <div class="menu-grid">
+    <div><h2>Navegar</h2><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a></div>
+    <div><h2>Negócios</h2><a href="financeiro.html">Financiamento</a><a href="colaboracao.html">Colaboração</a><a href="index.html#patrocinadores">Patrocinadores</a></div>
+    <div><h2>Contato</h2><a href="colaboracao.html#agente">Falar com um agente</a><a href="empresa.html#sob-medida">Sob medida</a></div>
+  </div>
+</div>
+<main>
+  <section class="hero">
+    <img class="hero-media" src="assets/atelier.jpg" alt="Sede AlphaVision, São Paulo">
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">A Empresa · legado</p>
+      <h1 class="display">A casa onde a exigência mora.</h1>
+      <p class="lede">Conectamos raridade ao patrimônio. Sem pressa, sem vitrine barulhenta.</p>
+    </div>
+  </section>
+  <section class="section" id="trajetoria">
+    <div class="wrap">
+      <p class="kicker">Trajetória</p>
+      <h2 class="display">Mais de uma década de uma só exigência.</h2>
+      <p class="prose">A AlphaVision nasceu para romper a intermediação comum. Investidores e engenheiros, em São Paulo, fizeram do ateliê o lugar da aquisição e da guarda — sob sigilo.</p>
+      <div class="timeline" style="margin-top:48px">
+        <article class="block"><p class="year">2018</p><h3>A fundação</h3><p class="prose">Boutique de importação direta. Dez famílias. Nenhuma porta aberta ao acaso.</p></article>
+        <article class="block"><p class="year">2022</p><h3>A expansão</h3><p class="prose">O braço de crédito planejado. Frotas inteiras, livres do ruído dos juros.</p></article>
+        <article class="block"><p class="year">2026</p><h3>A autoridade</h3><p class="prose">A referência em hipercarros raros na América Latina.</p></article>
+      </div>
+      <div class="metrics">
+        <div><strong>+R$ 500 mi</strong><span>Ativos sob guarda</span></div>
+        <div><strong>+50</strong><span>Hipercarros importados</span></div>
+        <div><strong>100%</strong><span>Sigilo contratual</span></div>
+      </div>
+      <p class="kicker">Três palavras</p>
+      <h2 class="display">Ofício. Proporção. Precisão.</h2>
+      <div class="pillars" style="margin-top:36px">
+        <article class="block"><h3>Ofício</h3><p class="prose">A beleza não é acabamento. É o ponto de partida.</p></article>
+        <article class="block"><h3>Proporção</h3><p class="prose">A forma se aperfeiçoa devagar. Nada entra por moda.</p></article>
+        <article class="block"><h3>Precisão</h3><p class="prose">O limite da física, sem perder o silêncio do habitáculo.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="split" id="sob-medida">
+    <img src="assets/interior.jpg" alt="Interior sob medida">
+    <div class="split-copy">
+      <p class="kicker">Sob Medida</p>
+      <h2 class="display">Cada carro, tão único quanto quem o encomenda.</h2>
+      <p class="prose">Você nos conta. Nós desenhamos. Revisamos juntos até a matéria obedecer à imaginação.</p>
+      <a class="pill" href="colaboracao.html#agente">Falar com a equipe</a>
+    </div>
+  </section>
+  <section class="section" id="contato">
+    <div class="wrap pillars">
+      <article class="block"><h3>Confidencialidade</h3><p class="prose">Negociação e entrega sob sigilo. O associado permanece anônimo.</p></article>
+      <article class="block"><h3>Curadoria</h3><p class="prose">Só séries limitadas. O comum não entra.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div class="legal"><span>© 2026 AlphaVision. 0800 777 VISION · concierge@alphavision.com</span><a href="index.html">Início</a></div></div></footer>
+<button class="veil" id="veil" type="button" hidden></button>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2 class="kicker" style="margin:0">Sua reserva</h2><button class="nav-btn" id="close-cart" type="button">Fechar</button></div>
+  <div class="drawer-list" id="cart-list"></div>
+  <div class="drawer-foot">
+    <div class="row muted"><span>Subtotal</span><span id="cart-sub"></span></div>
+    <div class="row muted"><span>Logística (3%)</span><span id="cart-tax"></span></div>
+    <div class="total"><span>Total</span><span id="cart-tot"></span></div>
+    <button class="pill" id="cart-go" type="button">Confirmar com a equipe</button>
+  </div>
+</aside>
+<script src="js/site.js"></script>
+</body>
+</html>

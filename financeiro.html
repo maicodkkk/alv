@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programa — AlphaVision</title>
+  <link rel="stylesheet" href="css/maison.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Saira+Condensed:wght@400;500&display=swap">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-side"><button class="nav-btn" id="open-menu" type="button">Menu</button><nav class="nav-links"><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a><a href="colaboracao.html">Colaboração</a></nav></div>
+  <a class="word" href="index.html">Alphavision</a>
+  <div class="nav-side end"><button class="nav-btn" id="open-cart" type="button" data-count>Reserva</button></div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu-top"><button class="nav-btn" id="close-menu" type="button">Fechar</button><span class="word">Alphavision</span><span></span></div>
+  <div class="menu-grid">
+    <div><h2>Navegar</h2><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a></div>
+    <div><h2>Negócios</h2><a href="financeiro.html">Financiamento</a><a href="colaboracao.html">Colaboração</a><a href="index.html#patrocinadores">Patrocinadores</a></div>
+    <div><h2>Contato</h2><a href="colaboracao.html#agente">Falar com um agente</a><a href="empresa.html#sob-medida">Sob medida</a></div>
+  </div>
+</div>
+<main>
+  <section class="hero" style="min-height:72svh">
+    <img class="hero-media" src="assets/detalhe.jpg" alt="">
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">Programa · aquisição planejada</p>
+      <h1 class="display">Uma carta à altura do carro.</h1>
+      <p class="lede">Sem o ruído dos juros. Só o tempo, alinhado ao patrimônio.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="benefits">
+        <article class="block"><p class="kicker">01</p><h3>Zero juros</h3><p class="prose">A carta carrega apenas taxa de administração diluída. Sem juros compostos.</p></article>
+        <article class="block"><p class="kicker">02</p><h3>Poder de compra</h3><p class="prose">Contemplado, o valor integral chega à conta. A negociação é à vista.</p></article>
+        <article class="block"><p class="kicker">03</p><h3>Lance com critério</h3><p class="prose">O lance embutido acelera a contemplação sem esvaziar o caixa.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Comparação</p>
+      <h2 class="display">O contrato, sem maquiagem.</h2>
+      <p class="prose">Leitura sobre uma carta de R$ 18.900.000.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Fator</th><th>Programa AlphaVision</th><th>Financiamento privado</th></tr></thead>
+          <tbody>
+            <tr><td>Juros ao ano</td><td>0% — isento</td><td>12,5% a 18,9%</td></tr>
+            <tr><td>Custo</td><td>Taxa de administração fixa, diluída</td><td>Juros sobre juros</td></tr>
+            <tr><td>Entrada</td><td>Não exige</td><td>20% a 40% do veículo</td></tr>
+            <tr><td>Compra</td><td>À vista. O desconto fica com você.</td><td>Parcelado pelo banco</td></tr>
+            <tr><td>Patrimônio</td><td>Você paga o carro.</td><td>Você paga o equivalente a dois ou três.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="simulador" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Simulador</p>
+      <h2 class="display">Faça a conta em silêncio.</h2>
+      <div class="sim" style="margin-top:36px">
+        <div class="stack">
+          <div>
+            <label class="lbl" for="veiculo">1. Veículo de referência</label>
+            <select id="veiculo" class="field">
+              <option value="5500000">NYX Concept — R$ 5.500.000</option>
+              <option value="18900000" selected>Noier Edition — R$ 18.900.000</option>
+              <option value="28900000">Xull Track — R$ 28.900.000</option>
+              <option value="57355000">Chiron Pur Sport — R$ 57.355.000</option>
+              <option value="custom">Outro valor</option>
+            </select>
+          </div>
+          <div id="custom-box" hidden>
+            <label class="lbl" id="credito-lbl" for="credito">Crédito sob medida</label>
+            <input id="credito" class="field" type="range" min="1000000" max="100000000" step="500000" value="10000000">
+          </div>
+          <div>
+            <span class="lbl">2. Prazo</span>
+            <div class="choice-row">
+              <button class="choice" id="m60" type="button" aria-pressed="true">60 meses</button>
+              <button class="choice" id="m100" type="button" aria-pressed="false">100 meses</button>
+            </div>
+          </div>
+          <div>
+            <label class="lbl" for="lance">3. Lance embutido</label>
+            <select id="lance" class="field">
+              <option value="0">Sem lance — parcela cheia</option>
+              <option value="0.1">10% do crédito</option>
+              <option value="0.2">20% do crédito</option>
+              <option value="0.3">30% — redução máxima</option>
+            </select>
+          </div>
+        </div>
+        <aside class="panel">
+          <p class="kicker">Parcela fixa</p>
+          <p class="figure"><span id="parcela">—</span><span class="fine"> / mês</span></p>
+          <div class="row"><span class="muted">Crédito</span><span id="res-cred"></span></div>
+          <div class="row"><span class="muted">Lance embutido</span><span id="res-lance"></span></div>
+          <div class="row"><span class="muted">Administração</span><span>10% diluída</span></div>
+          <p class="fine">A carta não é uma pressa.</p>
+          <button class="pill" id="pedir" type="button" style="margin-top:18px">Pedir a carta</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div class="legal"><span>© 2026 AlphaVision.</span><a href="index.html">Início</a></div></div></footer>
+<button class="veil" id="veil" type="button" hidden></button>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2 class="kicker" style="margin:0">Sua reserva</h2><button class="nav-btn" id="close-cart" type="button">Fechar</button></div>
+  <div class="drawer-list" id="cart-list"></div>
+  <div class="drawer-foot">
+    <div class="row muted"><span>Subtotal</span><span id="cart-sub"></span></div>
+    <div class="row muted"><span>Logística (3%)</span><span id="cart-tax"></span></div>
+    <div class="total"><span>Total</span><span id="cart-tot"></span></div>
+    <button class="pill" id="cart-go" type="button">Confirmar com a equipe</button>
+  </div>
+</aside>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Empresa — AlphaVision</title>
+  <link rel="stylesheet" href="css/maison.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Saira+Condensed:wght@400;500&display=swap">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-side"><button class="nav-btn" id="open-menu" type="button">Menu</button><nav class="nav-links"><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a><a href="colaboracao.html">Colaboração</a></nav></div>
+  <a class="word" href="index.html">Alphavision</a>
+  <div class="nav-side end"><button class="nav-btn" id="open-cart" type="button" data-count>Reserva</button></div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu-top"><button class="nav-btn" id="close-menu" type="button">Fechar</button><span class="word">Alphavision</span><span></span></div>
+  <div class="menu-grid">
+    <div><h2>Navegar</h2><a href="index.html">Home</a><a href="empresa.html">Empresa</a><a href="veiculos.html">Coleção</a></div>
+    <div><h2>Negócios</h2><a href="financeiro.html">Financiamento</a><a href="colaboracao.html">Colaboração</a><a href="index.html#patrocinadores">Patrocinadores</a></div>
+    <div><h2>Contato</h2><a href="colaboracao.html#agente">Falar com um agente</a><a href="empresa.html#sob-medida">Sob medida</a></div>
+  </div>
+</div>
+<main>
+  <section class="hero">
+    <img class="hero-media" src="assets/detalhe.jpg" alt="Detalhe de um hipercarro AlphaVision">
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">Colaboração · parcerias</p>
+      <h1 class="display">Sua marca ao lado das mais raras.</h1>
+      <p class="lede">Patrocínio, edições limitadas e crédito. Fale direto com um agente.</p>
+      <div class="hero-actions"><a class="pill" href="#agente">Fechar parceria</a></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Formatos</p>
+      <h2 class="display">Três jeitos de trabalhar juntos.</h2>
+      <div class="pillars" style="margin-top:36px">
+        <article class="block"><h3>Patrocínio</h3><p class="prose">Sua marca em eventos, lançamentos e na nossa vitrine digital.</p></article>
+        <article class="block"><h3>Edição limitada</h3><p class="prose">Um carro, uma série ou um detalhe assinado por duas marcas.</p></article>
+        <article class="block"><h3>Crédito e consórcio</h3><p class="prose">Parceiros financeiros levando o carro certo ao cliente certo.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="agente">
+    <div class="wrap">
+      <p class="kicker">Agente</p>
+      <h2 class="display">Conte sua proposta.</h2>
+      <div class="sim" style="margin-top:36px"><div class="stack">
+        <div><label class="lbl" for="c-nome">Seu nome</label><input id="c-nome" class="field" type="text" autocomplete="name"></div>
+        <div><label class="lbl" for="c-marca">Marca ou empresa</label><input id="c-marca" class="field" type="text"></div>
+        <div><label class="lbl" for="c-tipo">Tipo de parceria</label>
+          <select id="c-tipo" class="field"><option>Patrocínio</option><option>Edição limitada</option><option>Crédito e consórcio</option><option>Outro</option></select></div>
+        <div><label class="lbl" for="c-msg">Mensagem</label><input id="c-msg" class="field" type="text" placeholder="Resumo da proposta"></div>
+        <button class="pill" id="c-enviar" type="button">Falar com um agente</button>
+      </div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div class="legal"><span>© 2026 AlphaVision. 0800 777 VISION · concierge@alphavision.com</span><a href="index.html">Início</a></div></div></footer>
+<button class="veil" id="veil" type="button" hidden></button>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2 class="kicker" style="margin:0">Sua reserva</h2><button class="nav-btn" id="close-cart" type="button">Fechar</button></div>
+  <div class="drawer-list" id="cart-list"></div>
+  <div class="drawer-foot">
+    <div class="row muted"><span>Subtotal</span><span id="cart-sub"></span></div>
+    <div class="row muted"><span>Logística (3%)</span><span id="cart-tax"></span></div>
+    <div class="total"><span>Total</span><span id="cart-tot"></span></div>
+    <button class="pill" id="cart-go" type="button">Confirmar com a equipe</button>
+  </div>
+</aside>
+<script src="js/site.js"></script>
+</body>
+</html>
